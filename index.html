@@ -1,37 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>To-Do List — My GitHub Web</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My To-Do List ✨</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="app" aria-labelledby="app-title">
-    <h1 id="app-title">To-Do List</h1>
+  <div class="container">
+    <header>
+      <h1>🌿 My To-Do List</h1>
+      <p class="subtitle">Catat, fokus, dan selesaikan satu per satu 💪</p>
+    </header>
 
-    <form id="task-form" class="task-form" aria-label="Tambah tugas">
-      <input id="task-input" type="text" placeholder="Tambahkan tugas baru..." aria-label="Input tugas" required />
-      <button type="submit" id="add-btn" aria-label="Tambah">Tambah</button>
-    </form>
-
-    <div class="controls">
-      <div class="left">
-        <span id="task-count" aria-live="polite">0 tugas</span>
+    <section class="todo-app">
+      <div class="input-area">
+        <input type="text" id="taskInput" placeholder="Tulis kegiatanmu di sini..." />
+        <button id="addBtn">Tambah</button>
       </div>
-      <div class="right">
-        <button id="clear-done" title="Hapus semua tugas selesai">Hapus selesai</button>
-        <button id="clear-all" title="Hapus semua tugas">Hapus semua</button>
-      </div>
-    </div>
 
-    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+      <ul id="taskList"></ul>
+    </section>
 
-    <footer class="footer">
-      <small>Disimpan di device kamu (localStorage). Deploy: GitHub Pages → branch <code>main</code> / <code>gh-pages</code>.</small>
+    <footer>
+      <p>✨ Semangat produktif setiap hari! ✨</p>
     </footer>
-  </main>
+  </div>
 
-  <script src="script.js" defer></script>
+  <div class="img-area">
+    <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/checklist-2023731_1280.png" alt="Checklist theme">
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
