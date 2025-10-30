@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To-Do List — My GitHub Web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" aria-labelledby="app-title">
+    <h1 id="app-title">To-Do List</h1>
+
+    <form id="task-form" class="task-form" aria-label="Tambah tugas">
+      <input id="task-input" type="text" placeholder="Tambahkan tugas baru..." aria-label="Input tugas" required />
+      <button type="submit" id="add-btn" aria-label="Tambah">Tambah</button>
+    </form>
+
+    <div class="controls">
+      <div class="left">
+        <span id="task-count" aria-live="polite">0 tugas</span>
+      </div>
+      <div class="right">
+        <button id="clear-done" title="Hapus semua tugas selesai">Hapus selesai</button>
+        <button id="clear-all" title="Hapus semua tugas">Hapus semua</button>
+      </div>
+    </div>
+
+    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+    <footer class="footer">
+      <small>Disimpan di device kamu (localStorage). Deploy: GitHub Pages → branch <code>main</code> / <code>gh-pages</code>.</small>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
